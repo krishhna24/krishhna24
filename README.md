@@ -2,16 +2,18 @@
   Profile README for github.com/krishhna24
   Accent colour is #d29922 (GitHub dark's amber) — it was chosen to sit with the
   warm palette of assets/JohanLiebert.gif. If you swap the GIF, re-pick the accent.
-  The numbers in the "Upstream" section are rewritten daily by .github/workflows/stats.yml.
+  Generated pieces (do not hand-edit):
+    assets/art/*      -> scripts/generate-art.mjs
+    assets/snake-*.svg-> scripts/generate-snake.mjs
+    the STATS block   -> scripts/update-stats.mjs
+  All three run daily from .github/workflows/refresh.yml.
 -->
 
 <table>
 <tr>
 <td width="62%" valign="top">
 
-# KrishhnaT
-
-**Distributed systems · exchange infrastructure**
+<img src="./assets/art/hero.svg" width="100%" alt="Krishhna T — distributed systems, exchange infrastructure" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=1000&color=D29922&vCenter=true&width=440&height=32&lines=in-memory+order+books;durable+recovery%2C+exact+decimals;agentic+tooling+for+the+terminal;upstream%3A+kubernetes+%C2%B7+kubeedge" alt="in-memory order books · durable recovery, exact decimals · agentic tooling for the terminal · upstream: kubernetes, kubeedge" />
 
@@ -43,9 +45,7 @@ $ whoami --verbose
   rule        no floats in money math, ever
 ```
 
----
-
-## Now
+<img src="./assets/art/sec-now.svg" width="100%" alt="Now" />
 
 <!-- Hand-edited — update this when your focus moves. Nothing here is generated. -->
 
@@ -56,9 +56,7 @@ $ whoami --verbose
 - Enabling the remaining `kube-api-linter` rules across the `batch` and `authorization` groups
 - Extending **glyph-agent**'s tool loop
 
----
-
-## Work
+<img src="./assets/art/sec-work.svg" width="100%" alt="Work" />
 
 <table>
 <tr>
@@ -116,36 +114,7 @@ is Lua-scripted so concurrent requests can't race the counter.
 <a href="https://github.com/krishhna24/CEX-MatchingEngine-Assignment">CEX matching engine</a> (queue-based RPC) ·
 <a href="https://github.com/krishhna24/r2-file-upload-demo">r2-file-upload</a></sub>
 
----
-
-## Inside `perps`
-
-The piece I'd point at first — a single-writer engine that can lose its
-process and come back correct.
-
-```console
-$ kubectl get workloads -n perps -o wide
-
-NAME                     ROLE                                        STATE
-engine                   in-memory book, balances, positions         source of truth
-persistence              EVENT_QUEUE -> postgres read model          projecting
-websocket                authenticated pub/sub fan-out               streaming
-mark-price-engine        top-of-book -> mark price + funding rate    oracle
-liquidation-engine       positions vs. mark price                    watching
-funding-rate-scheduler   settles funding every 8h                    cron
-server                   REST: auth, balances, orders, depth         serving
-
-$ kubectl describe recovery/engine
-
-  snapshot   S3 every ~3s (LocalStack in dev)
-  replay     tail of EVENT_QUEUE since the last snapshot
-  money      decimal.js end to end — no floats anywhere
-  known      single instance by design; the repo lists what is out of scope
-```
-
----
-
-## Stack
+<img src="./assets/art/sec-stack.svg" width="100%" alt="Stack" />
 
 <table>
 <tr><td><sub>LANGUAGES</sub></td><td><img src="https://skillicons.dev/icons?i=ts,go,cpp,bash&theme=dark" height="38" alt="TypeScript, Go, C++, Bash" /></td></tr>
@@ -156,15 +125,13 @@ $ kubectl describe recovery/engine
 <tr><td><sub>LEARNING</sub></td><td><img src="https://skillicons.dev/icons?i=rust&theme=dark" height="38" alt="Rust" /></td></tr>
 </table>
 
----
-
-## Upstream
+<img src="./assets/art/sec-upstream.svg" width="100%" alt="Upstream" />
 
 Most of it is API machinery: migrating validation to declarative markers,
 turning on `kube-api-linter` rules group by group, moving controllers to
 `AddEventHandlerWithOptions`, and tracking down flaky tests to their cause.
 
-<!-- Numbers below are regenerated daily by .github/workflows/stats.yml — edit the script, not this block. -->
+<!-- Regenerated daily by scripts/update-stats.mjs — edit the script, not this block. -->
 <!-- STATS:START -->
 ```text
 REPOSITORY                STARS   MERGED  AREAS
@@ -172,7 +139,7 @@ kubernetes/kubernetes     125k    13      api-machinery · storage · auth · cl
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     130k    2       editor · svg export
 
-last 12 months   979 contributions   341 commits   49 pull requests
+last 12 months   981 contributions   342 commits   49 pull requests
 ```
 <!-- STATS:END -->
 
@@ -185,23 +152,17 @@ last 12 months   979 contributions   341 commits   49 pull requests
 <a href="https://github.com/krishhna24?tab=overview">all activity →</a>
 </sub>
 
----
+<img src="./assets/art/sec-signal.svg" width="100%" alt="Signal" />
 
-## Signal
-
-<!-- Generated into this repo's `output` branch by .github/workflows/snake.yml.
-     It 404s until that workflow has run once — trigger it from the Actions tab. -->
+<!-- Generated by scripts/generate-snake.mjs and committed to assets/.
+     Nothing external renders this, so it cannot 404 or rate-limit.
+     Refresh: GITHUB_TOKEN=... node scripts/generate-snake.mjs -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krishhna24/krishhna24/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krishhna24/krishhna24/output/snake.svg" />
-  <img src="https://raw.githubusercontent.com/krishhna24/krishhna24/output/snake.svg" alt="Contribution graph" width="100%" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/snake-light.svg" />
+  <img src="./assets/snake-dark.svg" width="100%" alt="Contribution graph for the last year, eaten by a snake" />
 </picture>
 
-<img src="https://ghchart.rshah.org/d29922/krishhna24" alt="krishhna24's contribution chart" width="100%" />
-
----
-
-## How I work
+<img src="./assets/art/sec-principles.svg" width="100%" alt="How I work" />
 
 **Name what isn't done.** Every project I ship carries a *Known limitations*
 section. An unmarked gap is a defect; a documented one is a roadmap.
@@ -212,14 +173,12 @@ noticed yet.
 **Cleanup counts.** Most of my upstream work is linting, test coverage and
 flake triage — unglamorous, and the reason the interesting changes land safely.
 
----
+<img src="./assets/art/sec-elsewhere.svg" width="100%" alt="Elsewhere" />
 
-## Elsewhere
-
-<a href="https://github.com/krishhna24"><img src="https://img.shields.io/badge/GitHub-krishhna24-C9D1D9?style=flat-square&logo=github&logoColor=white&labelColor=0D1117" alt="GitHub" /></a>
-<a href="https://www.linkedin.com/in/krishhna-tupe-974593305/"><img src="https://img.shields.io/badge/LinkedIn-Krishhna%20Tupe-C9D1D9?style=flat-square&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" /></a>
-<a href="https://x.com/krishhna_dev"><img src="https://img.shields.io/badge/X-@krishhna__dev-C9D1D9?style=flat-square&logo=x&logoColor=white&labelColor=0D1117" alt="X" /></a>
-<a href="mailto:krishhnatupedev@gmail.com"><img src="https://img.shields.io/badge/Email-krishhnatupedev@gmail.com-C9D1D9?style=flat-square&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email" /></a>
+<a href="https://github.com/krishhna24"><img src="https://img.shields.io/badge/GitHub-krishhna24-30363D?style=flat-square&logo=github&logoColor=white&labelColor=0D1117" alt="GitHub" /></a>
+<a href="https://www.linkedin.com/in/krishhna-tupe-974593305/"><img src="https://img.shields.io/badge/LinkedIn-Krishhna%20Tupe-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn" /></a>
+<a href="https://x.com/krishhna_dev"><img src="https://img.shields.io/badge/X-@krishhna__dev-2F3439?style=flat-square&logo=x&logoColor=white&labelColor=0D1117" alt="X" /></a>
+<a href="mailto:krishhnatupedev@gmail.com"><img src="https://img.shields.io/badge/Email-krishhnatupedev@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email" /></a>
 
 <br>
 

@@ -1,19 +1,21 @@
-name: Update upstream stats
+name: Refresh README
 
 on:
   schedule:
     - cron: "17 5 * * *"   # daily, 05:17 UTC
   workflow_dispatch:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
 
 concurrency:
-  group: update-stats
+  group: refresh-readme
   cancel-in-progress: true
 
 jobs:
-  update:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,18 +24,25 @@ jobs:
         with:
           node-version: 20
 
-      - name: Regenerate stats block
+      # Numbers in the Upstream block.
+      - name: Refresh upstream stats
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/update-stats.mjs
 
+      # Contribution graph, rendered into assets/ so nothing external serves it.
+      - name: Regenerate contribution snake
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-snake.mjs
+
       - name: Commit if changed
         run: |
-          if git diff --quiet -- README.md; then
+          if git diff --quiet -- README.md assets/; then
             echo "No change."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: refresh upstream stats" -- README.md
+          git commit -m "chore: refresh stats and contribution graph" -- README.md assets/
           git push
