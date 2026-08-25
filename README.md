@@ -116,13 +116,63 @@ is Lua-scripted so concurrent requests can't race the counter.
 
 <img src="./assets/art/sec-stack.svg" width="100%" alt="Stack" />
 
+<!-- Each icon links to that project's site. To add one: copy a line and swap
+     the skillicons id (see https://skillicons.dev), the title/alt and the href. -->
 <table>
-<tr><td><sub>LANGUAGES</sub></td><td><img src="https://skillicons.dev/icons?i=ts,go,cpp,bash&theme=dark" height="38" alt="TypeScript, Go, C++, Bash" /></td></tr>
-<tr><td><sub>RUNTIME</sub></td><td><img src="https://skillicons.dev/icons?i=bun,nodejs,pnpm,vite&theme=dark" height="38" alt="Bun, Node.js, pnpm, Vite" /></td></tr>
-<tr><td><sub>SERVICES</sub></td><td><img src="https://skillicons.dev/icons?i=express,nextjs,react,prisma&theme=dark" height="38" alt="Express, Next.js, React, Prisma" /></td></tr>
-<tr><td><sub>DATA</sub></td><td><img src="https://skillicons.dev/icons?i=redis,postgres,mongodb&theme=dark" height="38" alt="Redis, PostgreSQL, MongoDB" /></td></tr>
-<tr><td><sub>INFRA</sub></td><td><img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,cloudflare,linux,githubactions&theme=dark" height="38" alt="Docker, Kubernetes, AWS, Cloudflare, Linux, GitHub Actions" /></td></tr>
-<tr><td><sub>LEARNING</sub></td><td><img src="https://skillicons.dev/icons?i=rust&theme=dark" height="38" alt="Rust" /></td></tr>
+<tr>
+<td valign="middle"><sub><b>LANGUAGES</b></sub></td>
+<td valign="middle">
+<a href="https://www.typescriptlang.org/" title="TypeScript"><img src="https://skillicons.dev/icons?i=ts&theme=dark" height="40" alt="TypeScript" /></a>
+<a href="https://go.dev/" title="Go"><img src="https://skillicons.dev/icons?i=go&theme=dark" height="40" alt="Go" /></a>
+<a href="https://isocpp.org/" title="C++"><img src="https://skillicons.dev/icons?i=cpp&theme=dark" height="40" alt="C++" /></a>
+<a href="https://www.gnu.org/software/bash/" title="Bash"><img src="https://skillicons.dev/icons?i=bash&theme=dark" height="40" alt="Bash" /></a>
+</td>
+</tr>
+<tr>
+<td valign="middle"><sub><b>RUNTIMES</b></sub></td>
+<td valign="middle">
+<a href="https://bun.sh/" title="Bun"><img src="https://skillicons.dev/icons?i=bun&theme=dark" height="40" alt="Bun" /></a>
+<a href="https://nodejs.org/en" title="Node.js"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" height="40" alt="Node.js" /></a>
+<a href="https://pnpm.io/" title="pnpm"><img src="https://skillicons.dev/icons?i=pnpm&theme=dark" height="40" alt="pnpm" /></a>
+<a href="https://vite.dev/" title="Vite"><img src="https://skillicons.dev/icons?i=vite&theme=dark" height="40" alt="Vite" /></a>
+</td>
+</tr>
+<tr>
+<td valign="middle"><sub><b>FRAMEWORKS</b></sub></td>
+<td valign="middle">
+<a href="https://expressjs.com/" title="Express"><img src="https://skillicons.dev/icons?i=express&theme=dark" height="40" alt="Express" /></a>
+<a href="https://nextjs.org/" title="Next.js"><img src="https://skillicons.dev/icons?i=nextjs&theme=dark" height="40" alt="Next.js" /></a>
+<a href="https://react.dev/" title="React"><img src="https://skillicons.dev/icons?i=react&theme=dark" height="40" alt="React" /></a>
+<a href="https://www.prisma.io/" title="Prisma"><img src="https://skillicons.dev/icons?i=prisma&theme=dark" height="40" alt="Prisma" /></a>
+</td>
+</tr>
+<tr>
+<td valign="middle"><sub><b>DATABASES &amp; MESSAGING</b></sub></td>
+<td valign="middle">
+<a href="https://www.postgresql.org/" title="PostgreSQL"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" height="40" alt="PostgreSQL" /></a>
+<a href="https://www.mongodb.com/" title="MongoDB"><img src="https://skillicons.dev/icons?i=mongodb&theme=dark" height="40" alt="MongoDB" /></a>
+<a href="https://redis.io/" title="Redis"><img src="https://skillicons.dev/icons?i=redis&theme=dark" height="40" alt="Redis" /></a>
+<a href="https://kafka.apache.org/" title="Apache Kafka"><img src="https://skillicons.dev/icons?i=kafka&theme=dark" height="40" alt="Apache Kafka" /></a>
+<a href="https://www.rabbitmq.com/" title="RabbitMQ"><img src="https://skillicons.dev/icons?i=rabbitmq&theme=dark" height="40" alt="RabbitMQ" /></a>
+</td>
+</tr>
+<tr>
+<td valign="middle"><sub><b>INFRA</b></sub></td>
+<td valign="middle">
+<a href="https://www.docker.com/" title="Docker"><img src="https://skillicons.dev/icons?i=docker&theme=dark" height="40" alt="Docker" /></a>
+<a href="https://kubernetes.io/" title="Kubernetes"><img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" height="40" alt="Kubernetes" /></a>
+<a href="https://aws.amazon.com/" title="AWS"><img src="https://skillicons.dev/icons?i=aws&theme=dark" height="40" alt="AWS" /></a>
+<a href="https://git-scm.com/" title="Git"><img src="https://skillicons.dev/icons?i=git&theme=dark" height="40" alt="Git" /></a>
+<a href="https://www.kernel.org/" title="Linux"><img src="https://skillicons.dev/icons?i=linux&theme=dark" height="40" alt="Linux" /></a>
+<a href="https://github.com/features/actions" title="GitHub Actions"><img src="https://skillicons.dev/icons?i=githubactions&theme=dark" height="40" alt="GitHub Actions" /></a>
+</td>
+</tr>
+<tr>
+<td valign="middle"><sub><b>LEARNING</b></sub></td>
+<td valign="middle">
+<a href="https://www.rust-lang.org/" title="Rust"><img src="https://skillicons.dev/icons?i=rust&theme=dark" height="40" alt="Rust" /></a>
+</td>
+</tr>
 </table>
 
 <img src="./assets/art/sec-upstream.svg" width="100%" alt="Upstream" />
@@ -139,7 +189,7 @@ kubernetes/kubernetes     125k    13      api-machinery · storage · auth · cl
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     130k    2       editor · svg export
 
-last 12 months   980 contributions   341 commits   49 pull requests
+last 12 months   982 contributions   343 commits   49 pull requests
 ```
 <!-- STATS:END -->
 
@@ -163,6 +213,10 @@ last 12 months   980 contributions   341 commits   49 pull requests
 </picture>
 
 <img src="./assets/art/sec-principles.svg" width="100%" alt="How I work" />
+
+> At work, I don't need to be the loudest person in the room. I observe,
+> understand, and move with purpose. While others chase recognition, I focus
+> on becoming impossible to ignore through results.
 
 **Name what isn't done.** Every project I ship carries a *Known limitations*
 section. An unmarked gap is a defect; a documented one is a roadmap.
