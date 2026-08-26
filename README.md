@@ -187,9 +187,9 @@ turning on `kube-api-linter` rules group by group, moving controllers to
 REPOSITORY                STARS   MERGED  AREAS
 kubernetes/kubernetes     125k    13      api-machinery · storage · auth · cli
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
-excalidraw/excalidraw     130k    2       editor · svg export
+excalidraw/excalidraw     131k    2       editor · svg export
 
-last 12 months   980 contributions   341 commits   49 pull requests
+last 12 months   983 contributions   344 commits   49 pull requests
 ```
 <!-- STATS:END -->
 
