@@ -185,11 +185,11 @@ turning on `kube-api-linter` rules group by group, moving controllers to
 <!-- STATS:START -->
 ```text
 REPOSITORY                STARS   MERGED  AREAS
-kubernetes/kubernetes     128k    21      api-machinery · storage · auth · cli
+kubernetes/kubernetes     128k    23      api-machinery · storage · auth · cli
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     132k    2       editor · svg export
 
-last 12 months   1015 contributions   367 commits   57 pull requests
+last 12 months   1018 contributions   370 commits   57 pull requests
 ```
 <!-- STATS:END -->
 
