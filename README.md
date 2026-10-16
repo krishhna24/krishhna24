@@ -189,7 +189,7 @@ kubernetes/kubernetes     128k    25      api-machinery · storage · auth · cl
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     134k    2       editor · svg export
 
-last 12 months   1155 contributions   361 commits   70 pull requests
+last 12 months   1159 contributions   361 commits   74 pull requests
 ```
 <!-- STATS:END -->
 
