@@ -3,10 +3,10 @@
   Accent colour is #d29922 (GitHub dark's amber) — it was chosen to sit with the
   warm palette of assets/JohanLiebert.gif. If you swap the GIF, re-pick the accent.
   Generated pieces (do not hand-edit):
-    assets/art/*      -> scripts/generate-art.mjs
-    assets/snake-*.svg-> scripts/generate-snake.mjs
-    the STATS block   -> scripts/update-stats.mjs
-  All three run daily from .github/workflows/refresh.yml.
+    assets/art/*      -> scripts/generate-art.mjs   (run by hand after editing SECTIONS)
+    assets/snake-*.svg-> scripts/generate-snake.mjs (daily)
+    the STATS block   -> scripts/update-stats.mjs   (daily)
+  The daily jobs run from .github/workflows/refresh.yml.
 -->
 
 <table>
@@ -15,13 +15,14 @@
 
 <img src="./assets/art/hero.svg" width="100%" alt="Krishhna T — distributed systems, exchange infrastructure" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=1000&color=D29922&vCenter=true&width=440&height=32&lines=in-memory+order+books;durable+recovery%2C+exact+decimals;agentic+tooling+for+the+terminal;upstream%3A+kubernetes+%C2%B7+kubeedge" alt="in-memory order books · durable recovery, exact decimals · agentic tooling for the terminal · upstream: kubernetes, kubeedge" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=3200&pause=1000&color=D29922&vCenter=true&width=440&height=32&lines=in-memory+order+books;durable+recovery%2C+exact+decimals;agentic+tooling+for+the+terminal;upstream%3A+kubernetes+%C2%B7+velero+%C2%B7+kubeedge" alt="in-memory order books · durable recovery, exact decimals · agentic tooling for the terminal · upstream: kubernetes, velero, kubeedge" />
 
 I build the parts of a system that are hard to get right twice — matching
 engines that own their state, queues that survive a restart, and money math
 that never touches a float.
 
-When I'm not building my own, I send patches upstream to Kubernetes.
+When I'm not building my own, I send patches upstream to Kubernetes, and
+I'm an LFX Mentorship mentee on Velero.
 
 </td>
 <td width="38%" valign="top">
@@ -40,21 +41,11 @@ $ whoami --verbose
   handle      krishhna24
   builds      matching engines · queues · recovery · agentic CLI tools
   upstream    kubernetes/kubernetes · kubeedge · excalidraw
+  mentorship  velero (LFX)
   languages   TypeScript (mine) · Go (upstream) · C++ (close to the metal)
   learning    Rust
   rule        no floats in money math, ever
 ```
-
-<img src="./assets/art/sec-now.svg" width="100%" alt="Now" />
-
-<!-- Hand-edited — update this when your focus moves. Nothing here is generated. -->
-
-- Graduating declarative validation rules beta → stable in Kubernetes
-  ([tracking issue](https://github.com/kubernetes/kubernetes/issues/141532) ·
-  [first PR](https://github.com/kubernetes/kubernetes/pull/141533))
-- Hardening **perps** — integration coverage and retry/DLQ handling on the event queue
-- Enabling the remaining `kube-api-linter` rules across the `batch` and `authorization` groups
-- Extending **glyph-agent**'s tool loop
 
 <img src="./assets/art/sec-work.svg" width="100%" alt="Work" />
 
@@ -177,15 +168,20 @@ is Lua-scripted so concurrent requests can't race the counter.
 
 <img src="./assets/art/sec-upstream.svg" width="100%" alt="Upstream" />
 
-Most of it is API machinery: migrating validation to declarative markers,
-turning on `kube-api-linter` rules group by group, moving controllers to
-`AddEventHandlerWithOptions`, and tracking down flaky tests to their cause.
+In Kubernetes most of it is API machinery: graduating declarative validation
+to stable, turning on `kube-api-linter` rules group by group, and tracking
+down flaky tests to their cause.
+
+Through **LFX Mentorship** I'm working on [Velero](https://github.com/velero-io/velero)'s
+e2e suite: getting the CSI snapshot and VolumeGroupSnapshot cases running on
+kind so they're tested in CI.
 
 <!-- Regenerated daily by scripts/update-stats.mjs — edit the script, not this block. -->
 <!-- STATS:START -->
 ```text
 REPOSITORY                STARS   MERGED  AREAS
 kubernetes/kubernetes     128k    25      api-machinery · storage · auth · cli
+velero-io/velero          10k     14      e2e · CSI snapshots · kind
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     134k    2       editor · svg export
 
@@ -194,9 +190,11 @@ last 12 months   1160 contributions   362 commits   74 pull requests
 <!-- STATS:END -->
 
 <sub>
-<a href="https://github.com/kubernetes/kubernetes/pull/140062">storage: migrate CSIDriver volumeLifecycleModes to declarative validation</a> ·
-<a href="https://github.com/kubernetes/kubernetes/pull/139890">ipallocator: replace sets.String with sets.Set</a> ·
-<a href="https://github.com/kubernetes/kubernetes/pull/139943">volume: use AddEventHandlerWithOptions in protection controllers</a> ·
+<a href="https://github.com/kubernetes/kubernetes/pull/141533">discovery: graduate declarative validation to stable</a> ·
+<a href="https://github.com/kubernetes/kubernetes/pull/142119">node: graduate RuntimeClass declarative validation to stable</a> ·
+<a href="https://github.com/kubernetes/kubernetes/pull/142052">resource: pin Quantity's serialized form across String, JSON and CBOR</a> ·
+<a href="https://github.com/velero-io/velero/pull/10598">velero: add VolumeGroupSnapshot e2e coverage</a> ·
+<a href="https://github.com/velero-io/velero/pull/10644">velero: run the CSI e2e cases on kind in CI</a> ·
 <a href="https://github.com/kubeedge/kubeedge/pull/6997">imageparser: keep both tag and digest when parsing a reference</a> ·
 <a href="https://github.com/excalidraw/excalidraw/pull/11441">excalidraw: fix invisible labelled arrows in exported SVG</a> ·
 <a href="https://github.com/krishhna24?tab=overview">all activity →</a>

@@ -12,6 +12,7 @@ const README = new URL("../README.md", import.meta.url);
 
 const REPOS = [
   { repo: "kubernetes/kubernetes",   areas: "api-machinery · storage · auth · cli" },
+  { repo: "velero-io/velero",        areas: "e2e · CSI snapshots · kind" },
   { repo: "kubeedge/kubeedge",       areas: "edge runtime · image refs" },
   { repo: "excalidraw/excalidraw",   areas: "editor · svg export" },
 ];

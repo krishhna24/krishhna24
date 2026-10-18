@@ -14,7 +14,7 @@
   <stop offset="0" stop-color="#d29922" stop-opacity=".55"/>
   <stop offset="1" stop-color="#d29922" stop-opacity="0"/>
 </linearGradient></defs>
-<text x="0" y="21" class="a" font-size="13" font-weight="700" letter-spacing="1">03</text>
+<text x="0" y="21" class="a" font-size="13" font-weight="700" letter-spacing="1">02</text>
 <text x="34" y="21" class="f" font-size="13">/</text>
 <text x="52" y="21" class="b" font-size="15" font-weight="700" letter-spacing="3.4">STACK</text>
 <rect x="122" y="14" width="758" height="1.5" fill="url(#gstack)"/></svg>

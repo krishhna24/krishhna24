@@ -60,7 +60,6 @@ const write = (name, content) => {
 
 // -- section headers --------------------------------------------------------
 const SECTIONS = [
-  ["now", "NOW"],
   ["work", "WORK"],
   ["stack", "STACK"],
   ["upstream", "UPSTREAM"],
