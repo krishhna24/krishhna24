@@ -185,7 +185,7 @@ velero-io/velero          10k     14      e2e · CSI snapshots · kind
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     134k    2       editor · svg export
 
-last 12 months   1160 contributions   362 commits   74 pull requests
+last 12 months   1161 contributions   363 commits   74 pull requests
 ```
 <!-- STATS:END -->
 
