@@ -181,11 +181,11 @@ kind so they're tested in CI.
 ```text
 REPOSITORY                STARS   MERGED  AREAS
 kubernetes/kubernetes     128k    25      api-machinery · storage · auth · cli
-velero-io/velero          10k     14      e2e · CSI snapshots · kind
+velero-io/velero          10k     15      e2e · CSI snapshots · kind
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     134k    2       editor · svg export
 
-last 12 months   1161 contributions   363 commits   74 pull requests
+last 12 months   1163 contributions   364 commits   75 pull requests
 ```
 <!-- STATS:END -->
 
