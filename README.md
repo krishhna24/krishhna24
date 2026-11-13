@@ -180,12 +180,12 @@ kind so they're tested in CI.
 <!-- STATS:START -->
 ```text
 REPOSITORY                STARS   MERGED  AREAS
-kubernetes/kubernetes     129k    28      api-machinery · storage · auth · cli
+kubernetes/kubernetes     129k    29      api-machinery · storage · auth · cli
 velero-io/velero          10k     24      e2e · CSI snapshots · kind
 kubeedge/kubeedge         7.6k    1       edge runtime · image refs
 excalidraw/excalidraw     136k    2       editor · svg export
 
-last 12 months   1253 contributions   408 commits   104 pull requests
+last 12 months   1255 contributions   409 commits   105 pull requests
 ```
 <!-- STATS:END -->
 
